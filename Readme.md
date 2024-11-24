@@ -1,4 +1,3 @@
-https://github.com/cocktails-for-programmers/cocktails_for_programmers
-
-
-https://www.gnu.org/software/bash/manual/
+- https://github.com/cocktails-for-programmers/cocktails_for_programmers
+- https://www.gnu.org/software/bash/manual/
+- www.umweltbundesamt.de/api/air_data/v2

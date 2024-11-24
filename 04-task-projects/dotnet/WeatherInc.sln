@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{BD1DF56A-870C-49B5-994D-B666261E1B81}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		WeatherInc.sln = WeatherInc.sln
+		global.json = global.json
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{5AC0A5EE-1317-435A-91FF-206D2EC64238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAppTests", "WeatherAppTests\WeatherAppTests.csproj", "{82EDC88F-7425-48C1-ABF2-C7E418E60140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AC0A5EE-1317-435A-91FF-206D2EC64238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC0A5EE-1317-435A-91FF-206D2EC64238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC0A5EE-1317-435A-91FF-206D2EC64238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC0A5EE-1317-435A-91FF-206D2EC64238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EDC88F-7425-48C1-ABF2-C7E418E60140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EDC88F-7425-48C1-ABF2-C7E418E60140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EDC88F-7425-48C1-ABF2-C7E418E60140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EDC88F-7425-48C1-ABF2-C7E418E60140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B240CB3-F958-4941-8200-550457AE634C}
+	EndGlobalSection
+EndGlobal

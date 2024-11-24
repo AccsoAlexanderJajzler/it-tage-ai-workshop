@@ -1,0 +1,36 @@
+@page "/converter"
+@rendermode InteractiveServer
+
+<PageTitle>Converter</PageTitle>
+<h1>Converter</h1>
+
+<div>
+    <label for="fahrenheit">Fahrenheit:</label>
+    <input id="fahrenheit" type="number" @bind="Fahrenheit" @bind:after="FahrenheitToCelsius" />
+</div>
+
+<div>
+    @* // TODO 🥉 - Truncate Celsius in the template after two decimal points *@
+    @Fahrenheit °F equals @Celsius °C
+</div>
+
+@* // TODO 🥈 - Write tests for this component *@
+@code {
+    double? Fahrenheit { get; set; } = 0;
+    double? Celsius { get; set; } = 0;
+    
+    void FahrenheitToCelsius()
+    {
+        if (Fahrenheit.HasValue)
+        {
+            Celsius = FahrenheitToCelsius(Fahrenheit.Value);
+        }
+    }
+    
+    // TODO 🥈 - Write tests for this business critical method
+    static double FahrenheitToCelsius(double fahrenheit)
+    {
+        // TODO 🥉 - Why is this conversion not working?
+        return (fahrenheit - 31) * 5 / 9;
+    }
+}

@@ -1,0 +1,105 @@
+@page "/WeatherBug"
+@using global::Weather.NET.Models
+@using Weather.NET
+@using Weather.NET.Enums
+@using Weather.NET.Models.WeatherModel
+@using WeatherApp.Model.OpenWeather
+@inject IConfiguration Configuration
+
+<RadzenCard>
+    <RadzenCardContent>
+        <h3>Weather Maps</h3>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Zoom Level</th>
+                <th>Possible XY</th>
+                <th>Quantity of Tiles</th>
+                <th>Area to Represent</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var option in _weatherMapsOptions)
+            {
+                <tr>
+                    <td>@option.ZoomLevel</td>
+                    <td>@option.PossibleXY</td>
+                    <td>@option.QuantityOfTiles</td>
+                    <td>@option.AreaToRepresent</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        @* //TODO: Add missing Compontens for Zoom level, Map layer and input field for X and Y*@
+
+
+        <RadzenButton Text="Get Weather Map" Click="@GetWeatherMap"/>
+
+    </RadzenCardContent>
+
+@if(convertedImage is not null){
+
+    <RadzenCard>
+        <div style="background-color: #000000;">
+            <img src="data:image/png;base64,@convertedImage" alt="Weather Map" width="600px" height="600px"/>
+        </div>
+    </RadzenCard>
+}
+
+</RadzenCard>
+
+@code {
+
+    private List<WeatherMaps> GetDefinition()
+    {
+        List<WeatherMaps> content = new List<WeatherMaps>()
+        {
+            new WeatherMaps()
+            {
+                ZoomLevel = "0",
+                PossibleXY = "1",
+                QuantityOfTiles = "1",
+                AreaToRepresent = "whole world"
+            },
+        };
+
+        return content;
+    }
+
+    private int xValue;
+    private int yValue;
+    private string selectedZoomLevel;
+
+    private List<string> _zoomLevels = new List<string>() { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+    private List<string> _areaToRepresent = new List<string>() { "whole world", "one quarter of the world", "subcontinental area", "largest country", "largest country", "large African country", "large European country", "small country, US state", "wide area, large metropolitan area", "wide area, metropolitan area" };
+    private List<string> _mapLayers = new List<string>() { "clouds_new", "precipitation_new", "pressure_new", "wind_new" };
+    private string selectedMapLayer = "clouds_new";
+    private WeatherClient _client;
+
+    private WeatherModel? weatherByName;
+    private string cityName = string.Empty;
+    private bool hasError;
+    private string errorMessage = string.Empty;
+    private List<WeatherMaps> _weatherMapsOptions;
+
+    private string convertedImage;
+
+    protected override void OnInitialized()
+    {
+        _weatherMapsOptions = GetDefinition();
+    }
+
+    private string? LoadApiKey()
+    {
+        var apiKey = Configuration.GetSection("OpenWeatherAPI");
+        return apiKey.Value;
+    }
+
+    // TODO 🥈 - Create method to get Weather maps in version 1.0 https://tile.openweathermap.org/map/{layer}/{z}/{x}/{y}.png?appid={API key}
+    private async Task GetWeatherMap()
+    {
+
+    }
+}

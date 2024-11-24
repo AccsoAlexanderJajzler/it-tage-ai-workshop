@@ -1,0 +1,37 @@
+@page "/forecast"
+@using System.Collections.Generic
+
+<PageTitle>Weather Forecast</PageTitle>
+
+<h1>Weather Forecast</h1>
+
+<ul>
+    @foreach (var forecast in _forecasts)
+    {
+        <li>@forecast.Date: @forecast.TemperatureC degrees Celsius, @forecast.Summary</li>
+    }
+</ul>
+
+@code {
+    private List<WeatherForecast> _forecasts;
+
+    // TODO 🥈 - Refactor this to a service - currently hard coded
+    protected override void OnInitialized()
+    {
+        _forecasts = new List<WeatherForecast>
+        {
+            new WeatherForecast { Date = DateTime.Now.AddDays(1), TemperatureC = 20, Summary = "Sunny" },
+            new WeatherForecast { Date = DateTime.Now.AddDays(2), TemperatureC = 22, Summary = "Cloudy" },
+            new WeatherForecast { Date = DateTime.Now.AddDays(3), TemperatureC = 18, Summary = "Rainy" },
+            new WeatherForecast { Date = DateTime.Now.AddDays(4), TemperatureC = 24, Summary = "Sunny" },
+            new WeatherForecast { Date = DateTime.Now.AddDays(5), TemperatureC = 23, Summary = "Cloudy" },
+        };
+    }
+
+    private class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+        public int TemperatureC { get; set; }
+        public string Summary { get; set; }
+    }
+}
