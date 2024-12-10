@@ -2398,11 +2398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/04-task-projects/dotnet/WeatherApp/WeatherApp.csproj",
+      "projectUniqueName": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/03-task-github-copilot/dotnet/WeatherApp/WeatherApp.csproj",
       "projectName": "WeatherApp",
-      "projectPath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/04-task-projects/dotnet/WeatherApp/WeatherApp.csproj",
+      "projectPath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/03-task-github-copilot/dotnet/WeatherApp/WeatherApp.csproj",
       "packagesPath": "/Users/jajzlar/.nuget/packages/",
-      "outputPath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/04-task-projects/dotnet/WeatherApp/obj/",
+      "outputPath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/03-task-github-copilot/dotnet/WeatherApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jajzlar/.nuget/NuGet/NuGet.Config"

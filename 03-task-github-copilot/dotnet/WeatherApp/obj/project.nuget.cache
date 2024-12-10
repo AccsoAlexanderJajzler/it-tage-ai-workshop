@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ccZudTp7/PU=",
+  "dgSpecHash": "FPaLqiHhujQ=",
   "success": true,
-  "projectFilePath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/04-task-projects/dotnet/WeatherApp/WeatherApp.csproj",
+  "projectFilePath": "/Users/jajzlar/DEV/Accso/workshop/it-tage-ai-workshop/03-task-github-copilot/dotnet/WeatherApp/WeatherApp.csproj",
   "expectedPackageFiles": [
     "/Users/jajzlar/.nuget/packages/anglesharp/1.1.1/anglesharp.1.1.1.nupkg.sha512",
     "/Users/jajzlar/.nuget/packages/anglesharp.css/1.0.0-beta.139/anglesharp.css.1.0.0-beta.139.nupkg.sha512",
